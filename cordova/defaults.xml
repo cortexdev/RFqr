@@ -48,10 +48,14 @@
     <!-- Preferences for Android -->
     <preference name="loglevel" value="DEBUG" />
     
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="15"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <gap:config-file platform="android" parent="/manifest">
+        <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="15"/>
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    </gap:config-file>
+    
+    
     
     <!-- This is required for native Android hooks -->
     <feature name="App">
